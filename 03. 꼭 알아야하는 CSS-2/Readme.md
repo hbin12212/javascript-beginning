@@ -159,11 +159,3 @@ display 속성만 잘 알고있어도 웹 요소들을 자유자재로 원하는
 감사합니다😄
 
 ---
-
-```
-🙏참고 & 출처
-
-https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Grid_Layout/Basic_concepts_of_grid_layout
-https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content
-https://developer.mozilla.org/en-US/docs/Web/CSS/align-items
-```

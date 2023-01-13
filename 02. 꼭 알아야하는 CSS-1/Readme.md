@@ -111,9 +111,3 @@ parent div 를 기준으로 top, right, bottom, left의 값이 적용 되며,
 감사합니다!!
 
 ---
-
-```
-🙏참고 & 출처
-
-https://developer.mozilla.org/ko/docs/Web/CSS/position
-```
