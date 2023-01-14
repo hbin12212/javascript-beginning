@@ -1,0 +1,165 @@
+안녕하세요😄
+
+> 이번시간에는 Promise 객체를 더욱 쉽고 직관적으로 작성할 수 있게 도와주는 async/await 문법에 대해 배워보도록하겠습니다.
+
+# async/await
+
+저번 시간에 배운 Promise 객체에 대해 복습할 겸, 간단한 비동기 처리 코드를 작성해보겠습니다.
+
+```js
+const wait = (ms) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve();
+        }, ms);
+    });
+};
+
+const start = () => {
+    wait(1000).then(() => {
+        console.log("1초 대기");
+    });
+};
+
+start();
+```
+
+대기 할 밀리세컨즈를 전달받고, 전달받은 밀리세컨즈 동안 대기하는 비동기 함수를 구현해봤습니다.
+
+start 함수를 호출해 wait 함수에서 Promise 객체를 반환하고, 1초가 지난 후,"1초 대기" 라는 문장을 출력하는 함수를 then 메서드에 콜백함수로 함수를 전달했습니다.
+
+저번 시간에서 배운 것 과 다른점은, resolve 함수에 아무런 값도 넣지 않고 호출했다는 점인데요, 이렇게 작성할 경우에는 비동기 함수가 성공적으로 종료되었다 라는 뜻으로 사용됩니다.
+
+우리는 위와 같이 작성된 코드를 `async/await` 을 이용해 더 직관적인 코드로 바꿔 작성할 수 있습니다.
+
+```js
+const wait = (ms) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve();
+        }, ms);
+    });
+};
+
+const start = async () => {
+    await wait(1000);
+    console.log("1초 대기");
+};
+
+start();
+```
+
+async 와 await 문법은 Promise 객체를 더욱 쉽고 직관적으로 작성할 수 있게 도와주는 역할을 합니다.
+
+async 키워드는 비동기 동작을 수행 할 함수(start)를 선언할 때 함수의 앞부분에, await 키워드는 비동기로 수행 되는 함수(wait)를 호출 할 때, 호출부 앞 부분에 작성합니다.
+
+async 키워드가 붙은 함수는 항상 Promise 객체를 반환하고,
+await 키워드는 async 키워드가 붙어있는 함수 내부에서만 사용 가능하며, 앞에 await가 있는 함수는 해당 Promise 가 끝날 때 까지 기다렸다가 다음 작업을 수행합니다.
+
+즉, await 가 작성된 함수가 종료되기 전에는 그 아래 작성된 코드들은 수행되지 않습니다.
+
+## 여러개의 비동기 함수 동시에 처리하기
+
+이번에는 async 와 await를 이용해 3개의 비동기 함수를 만들고, 하나의 함수에서 3개의 비동기 함수를 모두 실행해보는 코드를 작성해보겠습니다.
+
+```js
+const wait = (ms) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve();
+        }, ms);
+    });
+};
+
+const getA = async () => {
+    await wait(3000);
+    return "A";
+};
+
+const getB = async () => {
+    await wait(1000);
+    return "B";
+};
+
+const getC = async () => {
+    await wait(5000);
+    return "C";
+};
+
+const start = async () => {
+    const a = await getA(); //3초
+    console.log(a);
+    const b = await getB(); //1초
+    console.log(b);
+    const c = await getC(); //5초
+    console.log(c);
+};
+
+start();
+```
+
+위의 코드에서는 각각 3초, 1초, 5초 후에 실행되는 getA, getB, getC 함수들을 만들고, 이 함수들을 start 함수에서 비동기적으로 처리하도록 구현했습니다.
+
+함수 하나가 종료되야 다음 작업이 실행되기 때문에, 이 함수들을 start 함수에서 연달아 사용하게 되면서 start 함수가 실행되는 시간은 총 9초가 되는 것을 알 수 있습니다.
+
+이렇게 비동기 함수들이 여러 개 일 경우에는, 비동기 함수들을 동시에 실행시키면 작업을 훨씬 빠르게 처리할 수 있어지겠죠.
+
+이럴 때 Promise 객체의 메서드 중 하나인 `Promise.all`을 이용하면 여러 개의 비동기 함수를 동시에 처리할 수 있습니다.
+
+```js
+const start = async () => {
+    const res = await Promise.all([getA(), getB(), getC()]); //5초
+    console.log(res);
+};
+```
+
+start 함수를 위의 코드처럼 바꿔서 작성해보면, 5초 후에 ["A", "B", "C"] 가 출력이 되는 것을 확인할 수 있습니다.
+
+Promise.all 메서드는 여러개의 프로미스들을 반환하는 비동기 처리 함수를 배열에 담아 전달합니다.
+
+배열에 담긴 비동기 처리 함수들은 동시에 실행되지만, 배열에 담긴 비동기 처리 함수들 중 하나라도 실패한다면 전부 실패한 것으로 간주됩니다.
+
+이렇게 여러 개의 비동기 함수들이 처리되길 기다려야 하는 상황에서 우리는 Promise.all 을 통해 비동기 함수들을 동시에 처리할 수 있습니다.
+
+## 에러 핸들링
+
+마지막으로, 에러를 처리하는 방법에 대해 알아보겠습니다.
+
+앞서 Promise 객체를 이용해 비동기 처리를 할 경우에는 `.catch` 를 이용해 에러처리를 했었는데요, async와 await을 이용해 비동기 처리를 할 경우에는 어떻게 에러처리를 하는지 알아봅시다.
+
+```js
+const wait = (ms) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve();
+        }, ms);
+    });
+};
+
+const start = async () => {
+    try {
+        await wait(1000);
+        console.log("1초 대기");
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+start();
+```
+
+위와 같이 async 와 await 를 이용한 비동기 처리 함수에서는 `try catch` 문법을 이용해 예외처리를 할 수 있습니다.
+
+에러가 발생하면 catch 블록 안의 코드가 실행되고, 발견된 에러는 error 객체에 담기게 됩니다.
+
+try catch 를 이용한 에러 처리는 다음 api 호출 강의에서 실습을 통해 직접 사용해보신다면 훨씬 이해하기 쉬울 것 같습니다.
+
+---
+
+# next
+
+이번 시간에는 Promise 객체를 더욱 직관적으로 사용할 수 있는 async/await 문법에 대해 배우면서, 여러 비동기 함수들을 동시에 처리할 수 있는 Promise.all 문법과 함께 에러 처리 방법까지 배워보았습니다.
+
+다음 시간에는 지금까지 우리가 배운 비동기 처리에 대한 내용들을 사용해 볼 수 있는 API 호출에 대해 배워보겠습니다.
+
+---
