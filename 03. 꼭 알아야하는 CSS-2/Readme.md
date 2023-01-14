@@ -50,6 +50,7 @@ inline 값이 적용된 박스들도 확인을 해보겠습니다.
 display 속성값을 none 으로 주게 되면, 이렇게 그 요소가 존재하지 않았던 것처럼 사라지게 됩니다.
 
 > [ 정리 ] display : none, block, inline, inline-block
+
 > ![](https://velog.velcdn.com/images/hbin12212/post/ef51a18c-e4ca-401a-bd8e-6e248e5ef198/image.png)
 
 ## grid
