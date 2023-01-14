@@ -27,8 +27,14 @@
 
 아래의 예시와 같이, 스크립트는 웹 브라우저에서 페이지를 불러올 때 자동으로 실행됩니다.
 
-!codepen[hbin12212/embed/zYRBwXP?default-tab=html%2Cresult]
-<br/>
+```html
+<body>
+    자바스크립트
+</body>
+<script>
+    alert("자바스크립트에 대해 알아봅시다.");
+</script>
+```
 
 그럼 웹 브라우저는 자바스크립트를 어떻게 실행시키는 것일까요?
 
