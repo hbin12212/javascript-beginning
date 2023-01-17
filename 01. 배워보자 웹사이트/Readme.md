@@ -24,7 +24,7 @@ Javascript란 프로그래밍 언어로, 브라우저에서 다양한 일을 수
 
 > HTML 은 웹 요소들을 구성하고, CSS 는 웹 요소들을 꾸며주고, Javascript는 웹 요소들을 생성, 삭제, 변형 한다.
 
-HTML, CSS와는 다르게 Javascript는 어떻게 HTML로 작성된 웹 요소를 변형시킬 수 있을까요???
+HTML, CSS와는 다르게 Javascript는 어떻게 HTML로 작성된 웹 요소를 변형시킬 수 있을까요?
 
 이를 설명하기 위해서는 DOM (Document Object Model) 이라는 객체에 대한 이해가 필요합니다.
 
