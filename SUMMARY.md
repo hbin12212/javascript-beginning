@@ -1,4 +1,4 @@
-‌# 목차
+‌# SUMMARY
 
 ## SECTION0 :: 강의 소개
 
@@ -38,7 +38,7 @@
 ## SECTION5 :: DOM 과 DOM API
 
 -   [웹과 DOM](CHAPTER5/5-1.md)
--   [<script> 작성법](CHAPTER5/5-2.md)
+-   [스크립트 로딩전략](CHAPTER5/5-2.md)
 -   [DOM API]()
 
 ## SPECIAL :: 꼭 알아야하는 기본 CSS
