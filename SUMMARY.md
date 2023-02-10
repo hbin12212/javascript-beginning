@@ -30,10 +30,10 @@
 
 ## SECTION4 :: 자바스크립트 비동기 처리
 
--   [비동기적 처리](CHAPTER4/4-1.md.md)
--   [Promise 객체](CHAPTER4/4-2.md.md)
--   [async/await](CHAPTER4/4-3.md.md)
--   [API 호출](CHAPTER4/4-4.md.md)
+-   [비동기적 처리](CHAPTER4/4-1.md)
+-   [Promise 객체](CHAPTER4/4-2.md)
+-   [async/await](CHAPTER4/4-3.md)
+-   [API 호출](CHAPTER4/4-4.md)
 
 ## SECTION5 :: DOM 과 DOM API
 
