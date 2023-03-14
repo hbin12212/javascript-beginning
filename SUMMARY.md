@@ -16,12 +16,13 @@
 -   [연산자](CHAPTER2/2-4.md)
 -   [조건문](CHAPTER2/2-5.md)
 -   [함수](CHAPTER2/2-6.md)
--   [스코프와 호이스팅](CHAPTER2/2-7.md)
--   [함수 표현식](CHAPTER2/2-8.md)
--   [객체](CHAPTER2/2-9.md)
--   [배열](CHAPTER2/2-10.md)
--   [반목문](CHAPTER2/2-11.md)
--   [배열 내장함수](CHAPTER2/2-12.md)
+-   [스코프](CHAPTER2/2-7.md)
+-   [호이스팅](CHAPTER2/2-8.md)
+-   [함수 표현식](CHAPTER2/2-9.md)
+-   [객체](CHAPTER2/2-10.md)
+-   [배열](CHAPTER2/2-11.md)
+-   [반목문](CHAPTER2/2-12.md)
+-   [배열 내장함수](CHAPTER2/2-13.md)
 
 ## SECTION3 :: 자바스크립트 더 알아보기
 
@@ -40,6 +41,10 @@
 -   [웹과 DOM](CHAPTER5/5-1.md)
 -   [스크립트 로딩전략](CHAPTER5/5-2.md)
 -   [DOM API]()
+
+## SECTION6 :: 실전 프로젝트 준비하기
+
+## SECTION7 :: 실전 프로젝트 개발하기
 
 ## SPECIAL :: 꼭 알아야하는 기본 CSS
 
