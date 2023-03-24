@@ -22,7 +22,8 @@
 -   [객체](CHAPTER2/2-10.md)
 -   [배열](CHAPTER2/2-11.md)
 -   [반목문](CHAPTER2/2-12.md)
--   [배열 내장함수](CHAPTER2/2-13.md)
+-   [배열 내장함수-1](CHAPTER2/2-13.md)
+-   [배열 내장함수-2](CHAPTER2/2-14.md)
 
 ## SECTION3 :: 자바스크립트 더 알아보기
 
