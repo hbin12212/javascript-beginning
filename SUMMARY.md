@@ -27,13 +27,13 @@
 
 ## SECTION3 :: 자바스크립트 더 알아보기
 
--   [배열과 객체 구조분해](CHAPTER3/3-1.md)
+-   [배열과 객체의 구조 분해 할당](CHAPTER3/3-1.md)
 -   [spread와 rest](CHAPTER3/3-2.md)
 
 ## SECTION4 :: 자바스크립트 비동기 처리
 
 -   [비동기적 처리](CHAPTER4/4-1.md)
--   [Promise 객체](CHAPTER4/4-2.md)
+-   [프로미스 객체](CHAPTER4/4-2.md)
 -   [async/await](CHAPTER4/4-3.md)
 -   [API 호출](CHAPTER4/4-4.md)
 
