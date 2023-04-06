@@ -41,7 +41,7 @@
 
 -   [웹과 DOM](CHAPTER5/5-1.md)
 -   [DOM API-1](CHAPTER5/5-2.md)
--   [DOM API-2](CHAPTER5/5-4.md)
+-   [DOM API-2](CHAPTER5/5-3.md)
 
 ## SECTION6 :: 실전 프로젝트 준비하기
 
