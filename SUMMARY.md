@@ -49,5 +49,5 @@
 
 ## SPECIAL :: 꼭 알아야하는 기본 CSS
 
--   [position](CHAPTER6/6-1.md)
--   [display](CHAPTER6/6-2.md)
+-   [position](CHAPTER8/8-1.md)
+-   [display](CHAPTER8/8-2.md)
