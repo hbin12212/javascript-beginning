@@ -43,10 +43,6 @@
 -   [DOM API-1](CHAPTER5/5-2.md)
 -   [DOM API-2](CHAPTER5/5-3.md)
 
-## SECTION6 :: 실전 프로젝트 준비하기
-
-## SECTION7 :: 실전 프로젝트 개발하기
-
 ## SPECIAL :: 꼭 알아야하는 기본 CSS
 
 -   [position](CHAPTER8/8-1.md)
