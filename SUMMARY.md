@@ -42,8 +42,3 @@
 -   [웹과 DOM](CHAPTER5/5-1.md)
 -   [DOM API-1](CHAPTER5/5-2.md)
 -   [DOM API-2](CHAPTER5/5-3.md)
-
-## SPECIAL :: 꼭 알아야하는 기본 CSS
-
--   [position](CHAPTER8/8-1.md)
--   [display](CHAPTER8/8-2.md)
