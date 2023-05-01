@@ -1,9 +1,5 @@
 ‌# SUMMARY
 
-## SECTION0 :: 강의 소개
-
--   [강의소개](CHAPTER0/0-1.md)
-
 ## SECTION1 :: WHY 자바스크립트
 
 -   [자바스크립트를 왜 배워야 할까](CHAPTER1/1-1.md)
